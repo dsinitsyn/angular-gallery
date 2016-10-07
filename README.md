@@ -1,6 +1,5 @@
 # Angular Gallery
 
-<h2>Website</h2>
 <a target="_blank" href="http://angular.sinitsyn.pro/">http://angular.sinitsyn.pro</a>
 
 <h2> Description </h2>
