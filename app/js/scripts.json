@@ -1,0 +1,17 @@
+[
+	"bower_components/jquery/dist/jquery.js",
+	"bower_components/angular/angular.js",
+    "bower_components/angular-resource/angular-resource.js",
+    "bower_components/angular-route/angular-route.js",
+    "bower_components/ng-image-input-with-preview/dist/ng-image-input-with-preview.js",
+	"app/app.module.js",
+    "app/app.config.js",
+    "app/modules/core/core.module.js",
+    "app/modules/core/edit/edit.component.js",
+    "app/modules/core/uploader/uploader.component.js",
+    "app/modules/gallery/gallery.module.js",
+    "app/modules/gallery/admin/admin-gallery.module.js",
+    "app/modules/gallery/admin/admin-gallery.component.js",
+    "app/modules/gallery/user/user-gallery.module.js",
+    "app/modules/gallery/user/user-gallery.component.js"
+]

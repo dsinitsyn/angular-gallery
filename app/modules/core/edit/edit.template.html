@@ -1,0 +1,13 @@
+<span ng-switch="$ctrl.editMode">
+  <span ng-switch-when="true" ng-switch="$ctrl.fieldType">
+		<textarea class="edit-element" ng-switch-when="textarea" rows="4" ng-model="$ctrl.fieldValue"></textarea>
+		<input class="edit-element" ng-switch-default type="{{$ctrl.fieldType}}" ng-model="$ctrl.fieldValue">
+		<button class="save-btn" ng-click="$ctrl.handleModeChange()"><i class="icon-save"></i>Save</button>
+  </span>
+  <span ng-switch-default>
+  	{{$ctrl.fieldValue}}
+	<button ng-if="!$ctrl.fieldValue" ng-click="$ctrl.handleModeChange(this)"><i class="icon-info"></i>Add {{$ctrl.fieldName}}</button>
+	<button ng-if="$ctrl.fieldValue" ng-click="$ctrl.handleModeChange(this)"><i class="icon-edit"></i>Edit</button>
+  </span>
+</span>
+

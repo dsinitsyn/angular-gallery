@@ -1,0 +1,30 @@
+<header ng-if="!$ctrl.preview">
+  <div class="container">
+    <h1>Angular Gallery</h1>
+    <a href="#!/admin"><i class="icon-admin"></i>Administrator</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="control-panel">
+    <select class="filter" ng-model="$ctrl.orderProp" data-icon="a">
+      <option value="name">Alphabetical</option>
+      <option value="date">Newest</option>
+    </select>
+    <input class="search" placeholder="Search..." ng-model="$ctrl.query" />
+  </div>
+
+  <ul class="image-list">
+     <li ng-repeat="image in $ctrl.images | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+      <div class="image-wrapper">
+        <span class="image-name">{{image.name}}</span>
+        <i ng-show="image.tip" class="icon-info" ng-mouseover="showTip = true" ng-mouseout="showTip = false"></i>
+        <div ng-show="showTip" class="image-tip">{{image.tip}}</div>
+        <img ng-src="{{image.imageUrl}}" alt="{{image.name}}" />
+      </div>
+      <a href="#!/images/{{image.id}}"></a>
+    </li>
+  </ul>
+
+</div>

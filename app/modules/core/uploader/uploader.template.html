@@ -1,0 +1,15 @@
+<form name="myForm">
+  <input type="file" id="ng-uploader" name="myImage" image-with-preview
+  ng-model="$ctrl.image"
+  accept="image/jpeg,image/png"
+  dimensions="height < 2001 && width < 2001">
+  <label class="btn" ng-show="!$ctrl.image.src" for="ng-uploader">Upload image</label>
+  <span class="error" ng-show="myForm.myImage.$error.image">
+    Not a JPEG or a PNG!
+  </span>
+  <span class="error" ng-show="myForm.myImage.$error.dimensions">
+   Invalid dimensions! Expecting a landscape image smaller than 2000 x 2000.
+  </span>
+  <img height="35" ng-show="$ctrl.image.src" ng-src="{{$ctrl.image.src}}"/>
+  <button class="btn" ng-show="$ctrl.image.src" ng-click="$ctrl.upload();">Upload</button>
+</form>

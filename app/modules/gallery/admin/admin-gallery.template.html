@@ -1,0 +1,48 @@
+<header>
+  <div class="container">
+    <h1>Angular Gallery <small>Administrator</small></h1>
+    <a href="#!/gallery"><i class="icon-view"></i>View site</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="control-panel">
+    <div class="control-elements">
+      <select class="filter" ng-model="$ctrl.orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="date">Newest</option>
+      </select>
+      <input class="search" placeholder="Search..." ng-model="$ctrl.query" />
+    </div>
+    <button class="btn preview-btn" ng-click="$ctrl.handlePreviewMode();">Preview</button>
+    <span class="uploader">
+      <uploader on-upload="$ctrl.add(image);"></uploader> 
+    </span>
+  </div>  
+
+  <ul class="admin-image-list">
+    <li ng-repeat="image in $ctrl.images | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+        <div class="image-wrapper">
+          <img class="admin-image" ng-src="{{image.imageUrl}}" alt="{{image.name}}" />
+          <i ng-show="image.tip" class="icon-info"></i>
+        </div>
+        <div class="image-details">
+          <h2 class="image-name">
+            <edit field-value="image.name" field-name="name" field-type="text" on-update="$ctrl.update(this, 'name', value)"></edit>
+          </h2>
+          <button class="image-delete-btn" ng-click="$ctrl.delete(this)"><i class="icon-remove"></i> Delete</button>
+          <div class="image-tip">
+            <edit field-value="image.tip" field-name="tip" field-type="textarea" on-update="$ctrl.update(this, 'tip', value)"></edit>
+          </div>
+        </div>
+    </li>
+  </ul>
+
+  <div class="backdrop" ng-if="$ctrl.preview">
+    <div class="preview">
+      <button class="preview-btn btn" ng-if="$ctrl.preview" ng-click="$ctrl.handlePreviewMode()" class="btn pull-right">Close preview</button>
+      <div ng-include="'modules/gallery/user/user-gallery.template.html'" onload='$ctrl.preview = true'>
+    </div>
+    </div>
+  </div>  
+
