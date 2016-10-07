@@ -3,9 +3,9 @@ We are creating a frontend app that allows staff to manage web site content. on 
 
 Requirements:
 
-You should use one of the modern js frameworks
-It is necessary to emulate server interactions. All responses have to be stubed. But please keep in mind that it should be possible to unstub it fast and to change it for real requests.
-Markup should be simple but adaptive for mobile devices.
-You should create custom functionality for handling tooltips on images, and not use already existing solutions.
-Before implementing your solutions, provide an estimation and the list of technologies that you are going to use.
+-You should use one of the modern js frameworks
+-It is necessary to emulate server interactions. All responses have to be stubed. But please keep in mind that it should be possible to unstub it fast and to change it for real requests.
+-Markup should be simple but adaptive for mobile devices.
+-You should create custom functionality for handling tooltips on images, and not use already existing solutions.
+
 
