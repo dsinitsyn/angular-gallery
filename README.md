@@ -7,10 +7,10 @@ We are creating a frontend app that allows staff to manage web site content. on 
 
 <h3>Requirements:</h3>
 <ul>
-<li>You should use one of the modern js frameworks.</li>
-<li>It is necessary to emulate server interactions. All responses have to be stubed. But please keep in mind that it should be possible to unstub it fast and to change it for real requests.</li>
-<li>Markup should be simple but adaptive for mobile devices.</li>
-<li>You should create custom functionality for handling tooltips on images, and not use already existing solutions.</li>
+<li>Using one of the modern js frameworks.</li>
+<li>It is necessary to emulate server interactions. All responses have to be stubed.</li>
+<li>Simple but adaptive markup for mobile devices.</li>
+<li>Creating custom functionality for handling tooltips on images, and not use already existing solutions.</li>
 </ul>
 
 <h2> Installation </h2>
